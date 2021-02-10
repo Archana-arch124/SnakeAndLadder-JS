@@ -1,3 +1,3 @@
 const utility = require("./Utility");
 
-console.log(utility.rollDie());
+utility.mainGamePlay();

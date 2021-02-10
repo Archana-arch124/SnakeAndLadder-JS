@@ -7,7 +7,46 @@ class Utility{
     rollDie =()=> {
         this.random = Math.floor((Math.random()*6)+1);
         return this.random
-        
     }
-}
+    optionCheck =()=> {
+        this.Random = Math.floor((Math.random()*3)+1);
+        return this.Random
+    }
+    
+    mainGamePlay =()=> {
+
+        var newPosition = this.startPosition;
+        var option = 0;
+        var diceNumber = 0;
+        var No_Play = 1
+        var Ladder = 2;
+        var Snake = 3;
+
+        var diceNumber =this.rollDie();
+        var option = this.optionCheck();
+
+        console.log(` Dice after rolling!,the Number we got is: ${diceNumber}`);
+        
+        switch(option){
+
+            case No_Play:
+                console.log(` No-Play `);
+                newPosition = newPosition;
+                break;
+
+            case Ladder:
+                console.log(` Ladder `);
+                    newPosition = newPosition + diceNumber;
+                break;
+            
+            case Snake:
+                console.log(` Snake `);
+                    newPosition = newPosition - diceNumber;
+                break;
+            }
+            console.log(` NewPosition is : ${newPosition}`);
+        }
+
+    }
+  
 module.exports = new Utility()
