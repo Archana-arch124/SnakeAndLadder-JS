@@ -18,6 +18,7 @@ class Utility{
         var newPosition = this.startPosition;
         var option = 0;
         var diceNumber = 0;
+        var diceCount = 0;
         var No_Play = 1
         var Ladder = 2;
         var Snake = 3;
@@ -26,7 +27,7 @@ class Utility{
 
         var diceNumber =this.rollDie();
         var option = this.optionCheck();
-
+        var diceCount = diceCount + diceNumber;
         console.log(` Dice after rolling!,the Number we got is: ${diceNumber}`);
         
         switch(option){
@@ -49,6 +50,8 @@ class Utility{
                 break;
             }
             console.log(` NewPosition is : ${newPosition}`);
+            console.log(` Total number of times dice was played: ${diceCount}`);
+
         }
 
     }
