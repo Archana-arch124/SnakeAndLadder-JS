@@ -1,2 +1,3 @@
 const utility = require("./Utility");
-console.log(utility)
+
+console.log(utility.rollDie());
