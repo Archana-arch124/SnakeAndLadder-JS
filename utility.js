@@ -22,6 +22,7 @@ class Utility{
         var Ladder = 2;
         var Snake = 3;
         while(newPosition < this.endPosition){
+            newPosition++;
 
         var diceNumber =this.rollDie();
         var option = this.optionCheck();
