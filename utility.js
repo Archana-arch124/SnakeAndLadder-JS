@@ -21,6 +21,7 @@ class Utility{
         var No_Play = 1
         var Ladder = 2;
         var Snake = 3;
+        while(newPosition < this.endPosition){
 
         var diceNumber =this.rollDie();
         var option = this.optionCheck();
@@ -36,17 +37,19 @@ class Utility{
 
             case Ladder:
                 console.log(` Ladder `);
-                    newPosition = newPosition + diceNumber;
+                if(newPosition+diceNumber <= 100)   
+                newPosition = newPosition + diceNumber;
                 break;
             
             case Snake:
                 console.log(` Snake `);
-                    newPosition = newPosition - diceNumber;
+                if(newPosition-diceNumber <= 100)   
+                newPosition = newPosition - diceNumber;
                 break;
             }
             console.log(` NewPosition is : ${newPosition}`);
         }
 
     }
-  
+}  
 module.exports = new Utility()
